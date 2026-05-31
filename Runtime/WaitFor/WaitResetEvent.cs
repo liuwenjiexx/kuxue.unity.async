@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-namespace LWJ.Async
+namespace Unity.Async
 {
     public class WaitResetEvent : IWaitable
     {

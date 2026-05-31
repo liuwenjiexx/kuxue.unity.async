@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace LWJ.Async
+namespace Unity.Async
 {
     public class WaitNotNull : IWaitable,/* ITimeoutable,*/ ICancelable
     {

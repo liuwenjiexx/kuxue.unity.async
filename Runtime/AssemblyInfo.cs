@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 
-[assembly: AssemblyMetadata("Unity.Package.Name", "lwj.unity.async")]
-[assembly: InternalsVisibleTo("LWJ.Async.Editor")]
-[assembly: InternalsVisibleTo("LWJ.Async.Tests")]
-[assembly: InternalsVisibleTo("LWJ.Async.Tests.Editor")]
+[assembly: AssemblyMetadata("Unity.Package.Name", "unity.async")]
+[assembly: InternalsVisibleTo("Unity.Async.Editor")]
+[assembly: InternalsVisibleTo("Unity.Async.Tests")]
+[assembly: InternalsVisibleTo("Unity.Async.Tests.Editor")]

@@ -9,7 +9,7 @@ using UnityEngine;
 using Debug = UnityEngine.Debug;
 
 
-namespace LWJ.Async.Editor
+namespace Unity.Async.Editor
 {
     class EditorMainThreadScheduler : IThreadScheduler
     {

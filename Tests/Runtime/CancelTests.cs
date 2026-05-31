@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace LWJ.Async.Tests
+namespace Unity.Async.Tests
 {
     public class CancelTests : TestBase
     {

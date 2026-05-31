@@ -1,7 +1,7 @@
 
 using System;
 
-namespace LWJ.Async
+namespace Unity.Async
 {
     /// <summary>
     /// <see cref="SwitchThread"/>

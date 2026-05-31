@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-namespace LWJ.Async.Tests.Editor
+namespace Unity.Async.Tests.Editor
 {
     public class RefCounterTest
     {

@@ -9,7 +9,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using Async.Editor;
 
-namespace LWJ.Async.Tests.Editor
+namespace Unity.Async.Tests.Editor
 {
     public class SyncScopeTest
     {

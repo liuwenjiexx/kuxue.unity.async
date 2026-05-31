@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace LWJ.Async.Editor
+namespace Unity.Async.Editor
 {
     class EditorMainThreadAwaiter : IAwaiter, IAwaitable
     {

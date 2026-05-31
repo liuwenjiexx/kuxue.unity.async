@@ -4,7 +4,7 @@ using System.Diagnostics;
 using Unity.EditorCoroutines.Editor;
 using UnityEngine;
 
-namespace LWJ.Async.Editor
+namespace Unity.Async.Editor
 {
     public static partial class Extensions
     {

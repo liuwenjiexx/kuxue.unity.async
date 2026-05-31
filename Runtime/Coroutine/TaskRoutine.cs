@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace LWJ.Async
+namespace Unity.Async
 {
     class TaskRoutine : IEnumerator
     {

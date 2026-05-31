@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using Debug = UnityEngine.Debug;
 
-namespace LWJ.Async.Tests
+namespace Unity.Async.Tests
 {
     public class WaitForUnity : TestBase
     {

@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace LWJ.Async
+namespace Unity.Async
 {
     class SubThreadAwaiter : IAwaiter, IAwaitable
     {

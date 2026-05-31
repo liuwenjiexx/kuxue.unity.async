@@ -9,7 +9,7 @@ using System.Threading;
 using UnityEngine.Profiling;
 using System;
 
-namespace LWJ.Async.Tests
+namespace Unity.Async.Tests
 {
     public class TestCoroutine : TestBase
     {

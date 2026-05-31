@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-namespace LWJ.Async
+namespace Unity.Async
 {
     public class NotMainThreadException : Exception
     {

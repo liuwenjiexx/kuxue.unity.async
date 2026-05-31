@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace LWJ.Async
+namespace Unity.Async
 {
     //public enum SwitchThread
     //{

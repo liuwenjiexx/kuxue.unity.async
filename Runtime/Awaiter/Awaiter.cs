@@ -7,7 +7,7 @@ using System.Runtime.ExceptionServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace LWJ.Async
+namespace Unity.Async
 {
 
     class Awaiter : IAwaiter, IEnumerator
