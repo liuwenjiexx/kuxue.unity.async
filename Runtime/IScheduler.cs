@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     public interface IThreadScheduler
     {

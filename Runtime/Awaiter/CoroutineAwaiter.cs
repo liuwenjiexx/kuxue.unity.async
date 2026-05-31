@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
 
     public class CoroutineAwaiter : IAwaiter

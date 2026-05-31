@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     class MainThreadScheduler : IThreadScheduler
     {

@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     class SubThreadAwaiter : IAwaiter, IAwaitable
     {

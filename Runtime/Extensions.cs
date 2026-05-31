@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     public static partial class Extensions
     {

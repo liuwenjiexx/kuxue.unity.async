@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     public class WaitNotNull : IWaitable,/* ITimeoutable,*/ ICancelable
     {

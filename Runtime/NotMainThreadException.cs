@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     public class NotMainThreadException : Exception
     {

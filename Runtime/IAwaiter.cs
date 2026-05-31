@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     public interface IAwaiter : INotifyCompletion
     {

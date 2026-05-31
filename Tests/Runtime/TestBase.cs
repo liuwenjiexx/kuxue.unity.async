@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-namespace Kuxue.Async.Tests
+namespace LWJ.Async.Tests
 {
     public class TestBase
     {

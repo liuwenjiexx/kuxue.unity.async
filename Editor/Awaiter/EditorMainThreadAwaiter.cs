@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace Kuxue.Async.Editor
+namespace LWJ.Async.Editor
 {
     class EditorMainThreadAwaiter : IAwaiter, IAwaitable
     {

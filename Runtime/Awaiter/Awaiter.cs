@@ -7,7 +7,7 @@ using System.Runtime.ExceptionServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
 
     class Awaiter : IAwaiter, IEnumerator

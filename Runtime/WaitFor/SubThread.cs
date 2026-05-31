@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     /// <summary>
     /// <see cref="SwitchThread"/>

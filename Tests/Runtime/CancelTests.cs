@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Kuxue.Async.Tests
+namespace LWJ.Async.Tests
 {
     public class CancelTests : TestBase
     {

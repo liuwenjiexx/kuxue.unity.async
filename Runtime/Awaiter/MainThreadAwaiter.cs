@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     class MainThreadAwaiter : IAwaiter, IAwaitable
     {

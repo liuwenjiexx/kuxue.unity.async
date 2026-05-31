@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Kuxue.Async
+namespace LWJ.Async
 {
     class TaskRoutine : IEnumerator
     {
