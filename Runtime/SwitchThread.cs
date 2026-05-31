@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Async
+namespace Kuxue.Async
 {
     //public enum SwitchThread
     //{

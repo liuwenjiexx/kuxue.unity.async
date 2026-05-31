@@ -9,7 +9,7 @@ using System.Threading;
 using UnityEngine.Profiling;
 using System;
 
-namespace Async.Tests
+namespace Kuxue.Async.Tests
 {
     public class TestCoroutine : TestBase
     {

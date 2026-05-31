@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace Async.Editor
+namespace Kuxue.Async.Editor
 {
     class EditorMainThreadAwaiter : IAwaiter, IAwaitable
     {

@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 
-[assembly: AssemblyMetadata("Unity.Package.Name", "com.unity.async")]
-[assembly: InternalsVisibleTo("Async.Editor")]
-[assembly: InternalsVisibleTo("Async.Tests")]
-[assembly: InternalsVisibleTo("Async.Tests.Editor")]
+[assembly: AssemblyMetadata("Unity.Package.Name", "kuxue.async")]
+[assembly: InternalsVisibleTo("Kuxue.Async.Editor")]
+[assembly: InternalsVisibleTo("Kuxue.Async.Tests")]
+[assembly: InternalsVisibleTo("Kuxue.Async.Tests.Editor")]

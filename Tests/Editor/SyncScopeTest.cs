@@ -9,7 +9,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using Async.Editor;
 
-namespace Async.Tests.Editor
+namespace Kuxue.Async.Tests.Editor
 {
     public class SyncScopeTest
     {

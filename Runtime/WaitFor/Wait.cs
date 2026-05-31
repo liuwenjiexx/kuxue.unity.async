@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace Async
+namespace Kuxue.Async
 {
 
     public class Wait : IWaitable, /*ITimeoutable,*/ ICancelable

@@ -6,27 +6,29 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-
-public class TestBase
+namespace Kuxue.Async.Tests
 {
-    public int MainThreadId;
-
-    public int CurrentThreadId => Thread.CurrentThread.ManagedThreadId;
-
-    [OneTimeSetUp]
-    public virtual void OneTimeSetUp()
+    public class TestBase
     {
-        MainThreadId = CurrentThreadId;
-    }
+        public int MainThreadId;
 
-    public void AssertMainThread()
-    {
-        Assert.AreEqual(MainThreadId, CurrentThreadId);
-    }
+        public int CurrentThreadId => Thread.CurrentThread.ManagedThreadId;
 
-    public void AssertSubThread()
-    {
-        Assert.AreNotEqual(MainThreadId, CurrentThreadId);
-    }
+        [OneTimeSetUp]
+        public virtual void OneTimeSetUp()
+        {
+            MainThreadId = CurrentThreadId;
+        }
 
+        public void AssertMainThread()
+        {
+            Assert.AreEqual(MainThreadId, CurrentThreadId);
+        }
+
+        public void AssertSubThread()
+        {
+            Assert.AreNotEqual(MainThreadId, CurrentThreadId);
+        }
+
+    }
 }

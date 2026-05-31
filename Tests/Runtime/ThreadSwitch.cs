@@ -13,7 +13,7 @@ using Async;
 using Async.Editor;
 using Assert = UnityEngine.Assertions.Assert;
 using Debug = UnityEngine.Debug;
-namespace Async.Tests
+namespace Kuxue.Async.Tests
 {
     public class ThreadSwitch : TestBase
     {

@@ -9,7 +9,7 @@ using UnityEngine;
 using Debug = UnityEngine.Debug;
 
 
-namespace Async.Editor
+namespace Kuxue.Async.Editor
 {
     class EditorMainThreadScheduler : IThreadScheduler
     {

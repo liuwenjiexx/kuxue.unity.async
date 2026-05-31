@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Async
+namespace Kuxue.Async
 {
     /// <summary>
     /// <see cref="SwitchThread"/>

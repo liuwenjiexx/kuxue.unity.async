@@ -4,7 +4,7 @@ using System.Diagnostics;
 using Unity.EditorCoroutines.Editor;
 using UnityEngine;
 
-namespace Async.Editor
+namespace Kuxue.Async.Editor
 {
     public static partial class Extensions
     {

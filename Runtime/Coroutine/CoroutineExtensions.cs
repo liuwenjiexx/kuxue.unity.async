@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-namespace Async
+namespace Kuxue.Async
 {
     public static partial class Extensions
     {

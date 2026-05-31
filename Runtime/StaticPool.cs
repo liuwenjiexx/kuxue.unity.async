@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 
 
-namespace Async
+namespace Kuxue.Async
 {    
     /// <summary>
     /// 效率更高的对象池，复用对象避免GC, 

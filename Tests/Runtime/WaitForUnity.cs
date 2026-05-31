@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using Debug = UnityEngine.Debug;
 
-namespace Async.Tests
+namespace Kuxue.Async.Tests
 {
     public class WaitForUnity : TestBase
     {

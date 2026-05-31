@@ -9,7 +9,7 @@ using UnityEngine.Assertions;
 using UnityEngine.TestTools;
 using Assert = UnityEngine.Assertions.Assert;
 
-namespace Async.Tests
+namespace Kuxue.Async.Tests
 {
     public class TestThread : TestBase
     {

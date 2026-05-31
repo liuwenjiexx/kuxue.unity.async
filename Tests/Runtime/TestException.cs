@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Async.Tests
+namespace Kuxue.Async.Tests
 {
 
     public class TestException

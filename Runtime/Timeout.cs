@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Async
+namespace Kuxue.Async
 {/*
     public interface ITimeoutable
     {

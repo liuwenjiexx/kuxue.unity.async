@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-namespace Async.Tests.Editor
+namespace Kuxue.Async.Tests.Editor
 {
     public class TestBase
     {

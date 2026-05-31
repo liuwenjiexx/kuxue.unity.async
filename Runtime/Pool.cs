@@ -2,9 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
-namespace Async
+namespace Kuxue.Async
 {
 
     class Pool<T>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-namespace Async
+namespace Kuxue.Async
 {
     public class WaitResetEvent : IWaitable
     {

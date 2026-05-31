@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Async
+namespace Kuxue.Async
 {
 
     class CoroutineWrapper<T>
