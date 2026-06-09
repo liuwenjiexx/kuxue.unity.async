@@ -8,4 +8,4 @@ using System.Reflection;
 [assembly: AssemblyMetadata("Unity.Package.Name", "unity.async")]
 [assembly: InternalsVisibleTo("Unity.Async.Editor")]
 [assembly: InternalsVisibleTo("Unity.Async.Tests")]
-[assembly: InternalsVisibleTo("Unity.Async.Tests.Editor")]
+[assembly: InternalsVisibleTo("Unity.Async.EditorTests")]

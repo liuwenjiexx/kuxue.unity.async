@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
-using Async;
+using Unity.Async;
 using System.Threading;
 using UnityEngine.Profiling;
 using System;

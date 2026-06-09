@@ -37,9 +37,11 @@ namespace Unity.Async
         }
 
         bool IsMainThread => scheduler.ThreadId == Thread.CurrentThread.ManagedThreadId;
+ 
 
         public void Initalize(IEnumerator routine)
         {
+            routine = WrapRoutine(routine);
             if (MainThreadScheduler.IsMainThread)
             {
                 scheduler.StartCoroutine(routine);
@@ -49,6 +51,22 @@ namespace Unity.Async
                 scheduler.Post(state => scheduler.StartCoroutine(routine), null);
             }
         }
+
+        IEnumerator WrapRoutine(IEnumerator routine)
+        {
+            object current = null;
+            while (routine.MoveNext())
+            {
+                current = routine.Current;
+                if (current != null)
+                {
+                    if (current is YieldBreak)
+                        break;
+                }
+                yield return current;
+            }
+        }
+
 
         [DebuggerHidden]
         public T GetResult()
@@ -86,7 +104,7 @@ namespace Unity.Async
                         {
                             MainThreadScheduler.Current = null;
                         }
-                    },null);
+                    }, null);
                 }
                 else
                 {

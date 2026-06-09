@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Unity.EditorCoroutines.Editor;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using Async.Editor;
+using Unity.Async.Editor;
 
 namespace Unity.Async.Tests.Editor
 {
@@ -84,7 +84,7 @@ namespace Unity.Async.Tests.Editor
             Assert.AreEqual(1, lockScope.Count);
             await Task.Delay(50);
             Assert.IsTrue(isTimeout);
-            
+
             Assert.AreEqual(0, lockScope.Count);
             Debug.Log("Count: " + lockScope.Count);
         }
@@ -94,7 +94,7 @@ namespace Unity.Async.Tests.Editor
         {
             SyncLock lockScope = new SyncLock(20);
             int timeout = 0;
-        
+
             List<Task> tasks = new List<Task>();
             for (int i = 0; i < 10; i++)
             {

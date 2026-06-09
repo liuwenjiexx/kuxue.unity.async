@@ -93,7 +93,7 @@ namespace Unity.Async.Tests.Editor
             using (counter.Use(out var n))
             {
                 Assert.AreEqual(1, n);
-                Assert.AreEqual(1, counter.Count);    
+                Assert.AreEqual(1, counter.Count);
             }
             Assert.AreEqual(0, counter.Count);
             using (counter.Use(out var n2))

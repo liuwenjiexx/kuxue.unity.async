@@ -21,6 +21,10 @@ namespace Unity.Async
         private IWaitable waitable;
         // private Timeout? timeout;
         private CancellationToken cancellationToken;
+        private IInterruptible interruptible;
+        private int isInterrupted;
+        private int nextFrame;
+
 
         public Awaiter(IWaitable waitable, IThreadScheduler scheduler = null)
         {
@@ -36,6 +40,10 @@ namespace Unity.Async
                 ICancelable cancelable = (ICancelable)waitable;
                 cancellationToken = cancelable.CancellationToken;
             }
+
+            interruptible = waitable as IInterruptible;
+            isInterrupted = 0;
+
             /*
             if (waitable is ITimeoutable)
             {
@@ -57,12 +65,20 @@ namespace Unity.Async
 
         bool IsMainThread => scheduler.ThreadId == Thread.CurrentThread.ManagedThreadId;
 
-        public object Current => null;
-
+        public object Current
+        {
+            get
+            {
+                if (isInterrupted > 0)
+                    return YieldBreak.Single;
+                return null;
+            }
+        }
 
 
         private void Run()
         {
+            isInterrupted = 0;
             if (MainThreadScheduler.IsMainThread)
             {
                 scheduler.StartCoroutine(this);
@@ -70,7 +86,7 @@ namespace Unity.Async
             else
             {
                 scheduler.Post(state => scheduler.StartCoroutine(this), null);
-            }
+            } 
         }
 
         [DebuggerHidden]
@@ -161,6 +177,33 @@ namespace Unity.Async
             {
                 try
                 {
+                    if (isInterrupted > 0 || (interruptible != null && interruptible.Interrupt))
+                    {
+                        if (isInterrupted == 0)
+                        {
+                            nextFrame = UnityEngine.Time.frameCount + 1;
+                        }
+                        isInterrupted++;
+                        //if (isInterrupted > 1)
+                        if (UnityEngine.Time.frameCount > nextFrame)
+                        {
+                            throw InterruptedException.Single;
+                            //isCompleted = true; 
+                            //Complete(null);
+                        }
+                        //等待一帧
+                        return !isCompleted;
+
+                        if (continuation != null)
+                        {
+                            //continuation = null;
+                            //UnityEngine.Debug.Log("delete continuation");
+                        }
+                        //Complete(null);
+
+                        //throw InterruptedException.Single;
+                    }
+
                     if (waitable.IsDone)
                     {
                         Complete(null);
@@ -189,7 +232,7 @@ namespace Unity.Async
         public void Reset()
         {
         }
-    } 
+    }
 
     class Awaiter<T> : IAwaiter<T>, IEnumerator
     {
@@ -370,5 +413,23 @@ namespace Unity.Async
     }
 
 
+    public sealed class YieldBreak
+    {
+        private YieldBreak()
+        {
+        }
 
+        public static readonly YieldBreak Single = new YieldBreak();
+    }
+
+    public sealed class InterruptedException : Exception
+    {
+        private InterruptedException()
+        {
+        }
+
+        public static readonly InterruptedException Single = new InterruptedException();
+    }
 }
+
+

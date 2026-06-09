@@ -28,6 +28,12 @@ namespace Unity.Async
         CancellationToken CancellationToken { get; }
     }
 
+    //做不到中断执行，不能忽略异常
+    public interface IInterruptible
+    {
+        bool Interrupt { get; }
+    }
+
     public interface IReusable
     {
         void Unused();

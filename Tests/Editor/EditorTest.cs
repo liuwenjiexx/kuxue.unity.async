@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Unity.EditorCoroutines.Editor;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using Async.Editor;
+using Unity.Async.Editor;
 
 namespace Unity.Async.Tests.Editor
 {

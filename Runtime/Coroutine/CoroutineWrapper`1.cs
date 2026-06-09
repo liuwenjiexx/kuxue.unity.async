@@ -37,6 +37,10 @@ namespace Unity.Async
                 try
                 {
                     isDone = !topWorker.MoveNext();
+                    if (!isDone)
+                    {
+                        current = topWorker.Current;
+                    }
                 }
                 catch (Exception e)
                 {
@@ -55,6 +59,14 @@ namespace Unity.Async
                     break;
                 }
 
+                if (!isDone)
+                {
+                    if(current!=null && current is YieldBreak)
+                    {
+                        isDone = true;
+                    }
+                }
+
                 if (isDone)
                 {
                     processStack.Pop();
@@ -69,7 +81,7 @@ namespace Unity.Async
                         continue;
                     }
                 }
-                current = topWorker.Current;
+         
                 if (current == null)
                 {
                     yield return null;
@@ -95,6 +107,10 @@ namespace Unity.Async
                 else if (current is Task)
                 {
                     yield return ((Task)current).AsRoutine();
+                }
+                else if (current is YieldBreak)
+                {
+
                 }
                 else
                 {

@@ -35,7 +35,12 @@ namespace Unity.Async
                 isDone = true;
                 StaticPool<TaskRoutine>.Release(this);
                 if (ex != null)
-                    throw ex;
+                {
+                    if (!(ex.InnerException != null && ex.InnerException is InterruptedException))
+                    {
+                        throw ex;
+                    }
+                }
                 return false;
             }
             return true;
